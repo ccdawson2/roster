@@ -1,0 +1,20 @@
+<div class="well">
+    <h1>{{title}}</h1>
+
+    <form name="addEmpForm">
+        <fieldset>
+            <div class="form-group">
+                <input class="form-control" placeholder="First Name" ng-model="emp.fname" ng-change="noSpace()" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" placeholder="Last Name" ng-model="emp.lname" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+                <div class="pull-right">
+                    <a class="btn btn-default" href="/emps/list"><i class="fa fa-ban"></i> Cancel</a>
+                    <button class="btn btn-primary" ng-click="saveemp()" ng-disabled="addEmpForm.$invalid"><i class="fa fa-floppy-o"></i> Save</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>

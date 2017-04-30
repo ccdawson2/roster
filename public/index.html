@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+    <title>Employee Roster Application</title>
+    <link rel="icon" href="ximg/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="libs/toastr/toastr.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css"/>
+
+	<link rel="stylesheet" href="css/my-bootstrap.css">
+    <link rel="stylesheet" href="css/ng-weekly-scheduler.css">	
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Main Menu</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/users/list">Users</a></li>
+                        <li><a href="/emps/list">Employees</a></li>
+                        <li><a href="/clients/list">Clients</a></li>
+                        <li><a href="/weeklyroster">Weekly Roster</a></li>
+					</ul>
+                </div>
+            </div>
+        </nav>
+
+        <div ng-view></div>
+    </div>
+
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="libs/angular/angular.min.js"></script>
+	
+    <script src="libs/angular-route/angular-route.min.js"></script>
+	<script src="libs/angular-animate/angular-animate.js"></script>
+	<script src="libs/angular-dynamic-locale/dist/tmhDynamicLocale.js"></script>
+    <script src="libs/moment/moment.js"></script>
+    <script src="libs/toastr/toastr.min.js"></script>
+	
+<!--
+<script src="//localhost:35090/livereload.js?snipver=1" async="" defer=""></script></body>
+-->
+	
+	<script src="js/app.js"></script>
+    <script src="js/appRoutes.js"></script>
+	<script src="js/ng-weekly-scheduler.js"></script>
+	`
+    <script src="js/controllers/HomeCtrl.js"></script>
+	
+    <script src="js/controllers/UserListCtrl.js"></script>
+    <script src="js/controllers/UserAddCtrl.js"></script>
+	<script src="js/controllers/UserViewCtrl.js"></script>
+	<script src="js/controllers/UserEditCtrl.js"></script>
+    
+    <script src="js/controllers/EmpListCtrl.js"></script>
+    <script src="js/controllers/EmpAddCtrl.js"></script>
+	<script src="js/controllers/EmpViewCtrl.js"></script>
+	<script src="js/controllers/EmpEditCtrl.js"></script>
+    
+    <script src="js/controllers/ClientListCtrl.js"></script>
+    <script src="js/controllers/ClientAddCtrl.js"></script>
+	<script src="js/controllers/ClientViewCtrl.js"></script>
+	<script src="js/controllers/ClientEditCtrl.js"></script>
+        
+	<script src="js/controllers/WeeklyRosterCtrl.js"></script>
+    
+	</body>
+</html>

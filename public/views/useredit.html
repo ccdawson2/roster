@@ -1,0 +1,31 @@
+<div class="well">
+    <h1>{{title}}</h1>
+
+        <form class="form-horizontal" name="updateUserForm">
+        <div class="form-group">
+		
+   		   <label class="control-label col-sm-2" for="fname">First Name:</label>
+           <div class="col-sm-10">
+              <input class="form-control" id="fname" ng-model="user.fname" ng-change="noSpace()" required>
+           </div>
+   		   <label class="control-label col-sm-2" for="lname">Last Name:</label>
+           <div class="col-sm-10">
+              <input class="form-control" id="fname" ng-model="user.lname" ng-change="noSpace()" required>
+           </div> 				
+ 		   
+           <label class="control-label col-sm-2" for="roleSelect">Role:</label>
+           <div class="col-sm-10">
+              <select class="form-control" id="roleSelect" ng-model="selectedRole" ng-options="x for x in roles">
+              </select>		   
+           </div> 				
+   
+        </div>	
+		   
+        <div class="form-group">
+            <div class="pull-right">
+                <button class="btn btn-default" ng-click="cancel()"><i class="fa fa-ban"></i> Cancel</button>
+                <button class="btn btn-primary" ng-click="update()" ng-disabled="updateUserForm.$invalid"><i class="fa fa-floppy-o"></i> Update</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,46 @@
+<div class="well">
+  <h3>{{title}}</h3>
+
+    <form class="form-horizontal" name="addUserForm">
+        <div class="form-group">
+		
+   		   <label class="control-label col-sm-2" for="fname">First Name:</label>
+           <div class="col-sm-10">
+              <input class="form-control" id="fname" ng-model="user.fname" ng-change="noSpace()" required>
+           </div>
+   		   <label class="control-label col-sm-2" for="lname">Last Name:</label>
+           <div class="col-sm-10">
+              <input class="form-control" id="fname" ng-model="user.lname" ng-change="noSpace()" required>
+           </div> 				
+ 		   
+           <label class="control-label col-sm-2" for="roleSelect">Role:</label>
+           <div class="col-sm-10">
+              <select class="form-control" id="roleSelect" ng-model="selectedRole" ng-options="x for x in roles">
+              </select>		   
+           </div> 				
+
+           <label class="control-label col-sm-2" for="xxx">Full Time:</label>
+           <div class="col-sm-10 checkbox-inline">
+              <input class="form-control" type="checkbox" id="xxx" ng-model="xxx" ng-change="noSpace()" required>
+           </div> 		   
+        </div> 		   
+
+        <div class="form-group">
+           <label class="control-label col-sm-2" for="yyy">Salary:</label>
+           <div class="col-sm-10">
+<!--
+              <input class="form-control" type="number" id="yyy" ng-model="yyy" ng-change="noSpace()" required>
+-->			  
+			  <input class="form-control" ng-model="yyy" id="yyy" name="yyy" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/">
+			  <span ng-show="addUserForm.yyy.$error.pattern">This is a numeric field</span>
+           </div> 		   
+        </div>
+			
+        <div class="form-group">
+            <div class="pull-right">
+                <a class="btn btn-default" href="/users/list"><i class="fa fa-ban"></i> Cancel</a>
+                <button class="btn btn-primary" ng-click="saveuser()" ng-disabled="addUserForm.$invalid"><i class="fa fa-floppy-o"></i> Save</button>
+            </div>
+        </div>
+    </form>
+</div>

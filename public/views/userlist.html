@@ -1,0 +1,36 @@
+<div class="well">
+    <h2>{{title}}</h2>
+
+    <input class="my-form-control" placeholder="Search" ng-model="search">
+
+    <table class="table table-bordered table-hover table-striped table-list">
+        <thead>
+            <tr>
+                <th ng-click="sort('fname')"><span class="glyphicon sort-icon" ng-show="sortKey == 'fname'" ng-class="{'glyphicon-chevron-up': reverse, 'glyphicon-chevron-down': !reverse}"></span> First Name</th>
+                <th ng-click="sort('lname')"><span class="glyphicon sort-icon" ng-show="sortKey == 'lname'" ng-class="{'glyphicon-chevron-up': reverse, 'glyphicon-chevron-down': !reverse}"></span> Last Name</th>
+                <th ng-click="sort('lname')"><span class="glyphicon sort-icon" ng-show="sortKey == 'lname'" ng-class="{'glyphicon-chevron-up': reverse, 'glyphicon-chevron-down': !reverse}"></span> Role</th>
+            </tr>
+        </thead>
+        <tbody>
+<!--            <tr ng-repeat="contact in contacts | orderBy:sortKey:reverse | filter:search" ng-click="view(user._id)">
+-->
+            <tr ng-repeat="user in users" ng-click="view(user._id)">
+                <td>{{user.fname}}</td>
+                <td>{{user.lname}}</td>
+                <td>{{user.role}}</td>
+            </tr>
+            <tr ng-show="users.length == 0">
+                <td colspan="2">No Users added yet!</td>
+            </tr>
+        </tbody>
+    </table>
+    <form name="addUserForm">
+        <fieldset>
+            <div class="form-group">
+                <div class="pull-right">
+                    <button class="btn btn-primary" ng-click="adduser()" ng-disabled="addUserForm.$invalid"><i class="fa fa-floppy-o"></i> Add</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
