@@ -6,13 +6,14 @@ Prerequisites:
  git installed and in your PATH
  MongoDB (https://www.mongodb.com/) installed with Mongo DB directory (e.g. C:\data\db) and in your PATH
 
-to intall this demo you will need to;
+to install this demo you will need to;
  
  1. clone/fork this repository
  2. npm install
- 3. npm install -g bower
+ 3. npm install -g -s bower
  4. bower install
- 5. npm install -g mongo
+ 5. npm install -g -s mongo
+ 6. npm install -g -s nodemon
 
 to run this demo;
 
