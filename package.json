@@ -3,22 +3,21 @@
   "version": "1.0.0",
   "description": "Employee Roster",
   "main": "server.js",
-  "author": "Chris Dawson",
-  "license": "",
   "dependencies": {
-    "angular-animate": "^1.6.4",
     "angular-dynamic-locale": "^0.1.32",
     "angular-i18n": "^1.6.4",
+    "angular-animate": "^1.6.4",
     "angular-mocks": "^1.6.4",
-    "angular-scheduler": "0.0.1",
     "assert": "^1.4.1",
     "bluebird": "^3.5.0",
     "body-parser": "^1.17.1",
-    "express": "^4.13.4",
     "mongoose": "^4.9.3"
   },
+  "devDependencies": {},
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "devDependencies": {}
+  "author": "",
+  "license": ""
 }

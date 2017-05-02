@@ -7,10 +7,26 @@ angular.module('app').controller('UserAddCtrl', function($scope, $http, $locatio
 		 var tmp = [];
          console.log(response);
 
+		 if (response.data.length === 0)
+		 {
+	   	    console.log('Creating default roles ...');
+		    $http.post('/api/roles/createdefaults')
+		    .then(function(data) {
+               console.log('Default roles added successfully!');
+               console.log(data);
+			   
+               for(var o in data.data) {
+		          tmp.push(data.data[o].code);}            
+			   
+   		       $scope.roles = tmp;
+		       $scope.selectedRole = tmp[1];
+            }); 
+         };
+		 
          for(var o in response.data) {
 		    tmp.push(response.data[o].code);}
 
-   		 $scope.roles = tmp;
+  		 $scope.roles = tmp;
 		 $scope.selectedRole = tmp[1];
     })
 

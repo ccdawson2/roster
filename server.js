@@ -20,8 +20,6 @@ require('./app/empRoutes')(app);
 require('./app/clientRoutes')(app);
 require('./app/roleRoutes')(app);
 
-require('./config/dataInit');
-
 app.get('*', function(req, res) {
     res.sendfile('./public/index.html');
 });
